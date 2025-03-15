@@ -6,7 +6,7 @@ import './Header.css';
 function Header() {
     return (
         <header className="header">
-            <img src="/img/banner3.jpeg" alt="Kiosk am Niederrhein" className="header-image" />
+            <img src="/img/banner2.jpeg" alt="Kiosk am Niederrhein" className="header-image" />
             <nav className="header-nav">
                 <ul className="header-list">
                     <li className="header-item">

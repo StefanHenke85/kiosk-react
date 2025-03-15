@@ -7,6 +7,7 @@
     top: 0;
     z-index: 10;
     width: 100%;
+    
 }
 
 .header-image {
@@ -18,12 +19,14 @@
 }
 
 .header-nav {
-    background: black;
-    width: 100%;
-    margin: 0;
+    background: linear-gradient(to right,  #ff69b4,#4ec2f8);
+    width: 60%;
+    margin: 0 auto;
     padding: 10px 0;
     border-radius: 20px;
-    margin-top: 0; /* Entfernt den Abstand nach oben */
+    display: block;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    
 }
 
 .header-list {
