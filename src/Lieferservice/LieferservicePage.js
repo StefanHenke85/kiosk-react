@@ -12,7 +12,8 @@ function LieferservicePage() {
         <div>
             <div className="lieferservice">
                 <h2 className="lieferservice-title">Lieferservice bitte beachte die Lieferzeiten!!!</h2>
-                <h2 className="lieferservice-title">Freitag - Samstag 17:00 - 03:00 Sonntags 13:00 - 20:00 </h2>
+                <h2 className="lieferservice-title">Freitag - Samstag 21:00 - 03:00 Sonntags 13:00 - 20:00 </h2>
+                <h2 className="lieferservice-title">Mindestbestellwert 20€ (Tabakwaren ausgeschlossen). </h2>
                 
             </div>
             <div className="search-container"> {/* Container hinzugefügt */}
@@ -30,6 +31,7 @@ function LieferservicePage() {
                     <option value="sonstiges">Sonstiges</option>
                 </select>
             </div>
+            
             <ProductCatalog searchTerm={searchTerm} categoryFilter={categoryFilter} />
             <ShoppingCart />
         </div>

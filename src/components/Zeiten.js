@@ -25,7 +25,7 @@ function Zeiten() {
                             <div className="p-4">
                                 <img src="/img/Getränke2.jpg" alt="Lieferzeiten" className="w-full h-32 object-cover rounded mb-2" />
                                 <h3 className="text-lg font-semibold mb-1">Lieferzeiten</h3>
-                                <h4 className="text-gray-600 text-sm">Freitag - Samstag 17:00 - 03:00 </h4>
+                                <h4 className="text-gray-600 text-sm">Freitag - Samstag 21:00 - 03:00 </h4>
                                 <h4 className="text-gray-600 text-sm">Sonntags 13:00 - 20:00</h4>
                             </div>
                         </div>

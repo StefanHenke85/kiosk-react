@@ -32,10 +32,28 @@
     margin: 1rem 0;
 }
 
-.search-container input,
-.search-container select {
+div.search-container input[type="text"] {
+    margin: 0 0.5rem;
+    padding: 0.5rem; /* Padding erhöhen */
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    color: white;
+    font-family: inherit;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    border-color: black;
+    border: 5px;
+}
+
+div.search-container select {
     margin: 0 0.5rem;
     padding: 0.5rem;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    color: white;
+    font-family: inherit;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    border-color: black;
+    border: 5px;
 }
 
 div.product-box { /* Spezifität erhöht */
