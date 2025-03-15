@@ -1,0 +1,103 @@
+/* src/components/Header.css */
+
+
+.header {
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.header-image {
+    width: 100%;
+    height: 250px;
+    object-fit: fill;
+    border-radius: 20px;
+    margin-bottom: 0; /* Entfernt den Abstand nach unten */
+}
+
+.header-nav {
+    background: black;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    border-radius: 20px;
+    margin-top: 0; /* Entfernt den Abstand nach oben */
+}
+
+.header-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.header-item {
+    margin: 0 30px;
+}
+
+nav.header-nav .header-link { /* Spezifität erhöht */
+    padding: 10px 20px;
+    font-size: 1.1em;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: white;
+    transition: all 0.3s ease;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.header-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 105, 180, 0.5), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+}
+
+.header-link:hover {
+    background: linear-gradient(to left, #ff69b4, #4ec2f8);
+    text-shadow: 0 0 5px white;
+    color: black;
+    transform: perspective(1px) translateZ(5px) scale(1.05);
+}
+
+.header-link:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+    animation: glitter 1s infinite alternate;
+}
+
+@keyframes glitter {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0.2;
+    }
+}
+
+/* Media Queries für die mobile Version */
+@media (max-width: 768px) {
+    .header-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-item {
+        margin: 12px 0;
+    }
+
+    nav.header-nav .header-link { /* Spezifität erhöht */
+        width: 100%;
+        text-align: center;
+    }
+}

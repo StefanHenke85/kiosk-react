@@ -1,0 +1,109 @@
+/* src/Lieferservice/Lieferservice.css */
+
+.lieferservice-title {
+    color: rgb(245, 4, 225);
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: pulse 1s ease-in-out infinite alternate;
+    text-shadow: 2px 2px 1px rgba(1, 1, 1, 0.9);
+    text-align: center;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.lieferservice {
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: rgb(0, 0, 0);
+    padding: 2rem 1rem;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.search-container input,
+.search-container select {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+
+div.product-box { /* Spezifität erhöht */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 15px auto;
+    width: 220px;
+}
+
+.product-box img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart-button {
+    padding: 8px 12px;
+    font-size: 1em;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: white;
+    transition: all 0.3s ease;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    border-radius: 40px;
+    margin-top: 12px;
+}
+
+.add-to-cart-button:hover {
+    background: linear-gradient(to left, #ff69b4, #4ec2f8);
+}
+
+.product-box select,
+.product-box input[type="number"] {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 6px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    width: 100%; /* Breite an die Auswahlbox anpassen */
+    box-sizing: border-box; /* Padding und Border in die Breite einbeziehen */
+}
+
+@media (max-width: 1200px) {
+    .product-box {
+        width: 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .product-box {
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-box {
+        width: 150px;
+    }
+}

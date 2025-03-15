@@ -1,0 +1,50 @@
+.zeiten {
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: black; /* Farbe auf Weiß geändert */
+    padding: 2rem 1rem;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Hover-Effekt entfernt */
+/* .zeiten-box-zeiten:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+} */
+
+.zeiten-box-zeiten {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    background-color:linear-gradient(to right, #ff69b4, #007bff);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    /* transition: box-shadow 0.3s ease-in-out; */ /* Transition entfernt */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 800px; /* Maximale Breite angepasst */
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 Spalten für größere Bildschirme */
+        gap: 2rem;
+    }
+}
+
+.zeiten-box-zeiten img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}

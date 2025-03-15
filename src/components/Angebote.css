@@ -1,0 +1,60 @@
+.angebote {
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: rgb(0, 0, 0);
+    padding: 2rem 1rem; /* Füge Padding hinzu, um Abstand zu schaffen */
+}
+
+.angebote h2 {
+    color: rgb(245, 4, 225);
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: pulse 1s ease-in-out infinite alternate;
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.9);
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.angebot-box-angebot:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.angebot-box-angebot {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    background-color:linear-gradient(to right, #ff69b4, #007bff);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    max-width: 1200px; /* Füge eine maximale Breite hinzu, um die Boxen zu zentrieren */
+    margin: 0 auto; /* Zentriert den Container */
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3rem;
+    }
+}
+
+.angebot-box-angebot img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
