@@ -2,11 +2,13 @@
 
 
 .header {
-    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    background: linear-gradient(to right,  #ff69b4,#4ec2f8);
     position: sticky;
     top: 0;
     z-index: 10;
     width: 100%;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
     
 }
 
@@ -19,13 +21,13 @@
 }
 
 .header-nav {
-    background: linear-gradient(to right,  #ff69b4,#4ec2f8);
+    
     width: 60%;
     margin: 0 auto;
     padding: 10px 0;
     border-radius: 20px;
     display: block;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    
     
 }
 
