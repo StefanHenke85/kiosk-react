@@ -24,10 +24,10 @@ function ProductCatalog({ searchTerm, categoryFilter, addToCart }) {
         setQuantities({ ...quantities, [productId]: quantity });
     };
 
-    const handleAddToCart = (product) => {
+    const handleAddToCart = (product, category) => {
         const variation = selectedVariations[product.id] || product.variations?.[0];
         const quantity = quantities[product.id] || 1;
-        addToCart({ ...product, variation, quantity });
+        addToCart(product.id, category, quantity);
     };
 
     return (
@@ -61,7 +61,7 @@ function ProductCatalog({ searchTerm, categoryFilter, addToCart }) {
                                     onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
                                     min="1"
                                 />
-                                <button onClick={() => handleAddToCart(product)} className="add-to-cart-button">
+                                <button onClick={() => handleAddToCart(product, category)} className="add-to-cart-button">
                                     Zum Warenkorb hinzufügen
                                 </button>
                             </div>

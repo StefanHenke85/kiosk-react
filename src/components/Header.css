@@ -9,6 +9,7 @@
     width: 100%;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
+    border: 1px solid black;
     
 }
 
@@ -18,6 +19,7 @@
     object-fit: fill;
     border-radius: 20px;
     margin-bottom: 0; /* Entfernt den Abstand nach unten */
+    border: 1px solid black;
 }
 
 .header-nav {
@@ -29,6 +31,7 @@
     display: block;
     
     
+    
 }
 
 .header-list {
@@ -36,6 +39,7 @@
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    
 }
 
 .header-item {
@@ -54,6 +58,7 @@ nav.header-nav .header-link { /* Spezifität erhöht */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
     text-decoration: none;
     border-radius: 20px;
+    border: 1px solid black;
 }
 
 .header-link::before {

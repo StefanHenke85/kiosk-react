@@ -23,6 +23,8 @@
     background: linear-gradient(to right, #4ec2f8, #ff69b4);
     color: rgb(0, 0, 0);
     padding: 2rem 1rem;
+    
+    
 }
 
 .search-container {
@@ -30,6 +32,7 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
+    
 }
 
 div.search-container input[type="text"] {
@@ -41,7 +44,7 @@ div.search-container input[type="text"] {
     font-family: inherit;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
     border-color: black;
-    border: 5px;
+    border: 1px solid black;
 }
 
 div.search-container select {
@@ -53,7 +56,7 @@ div.search-container select {
     font-family: inherit;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
     border-color: black;
-    border: 5px;
+    border: 1px solid black;
 }
 
 div.product-box { /* Spezifität erhöht */
@@ -64,6 +67,7 @@ div.product-box { /* Spezifität erhöht */
     transition: box-shadow 0.3s ease-in-out;
     margin: 15px auto;
     width: 220px;
+    border: 1px solid black;
 }
 
 .product-box img {
@@ -103,9 +107,10 @@ div.product-box { /* Spezifität erhöht */
     margin-bottom: 8px;
     padding: 6px;
     border-radius: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     width: 100%; /* Breite an die Auswahlbox anpassen */
     box-sizing: border-box; /* Padding und Border in die Breite einbeziehen */
+    
 }
 
 @media (max-width: 1200px) {
@@ -148,4 +153,32 @@ div.product-box { /* Spezifität erhöht */
 
 .category-navbar button:hover {
     background: linear-gradient(to left, #007bff, #ff69b4);
+}
+
+.cart-wrapper {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 220px;
+}
+
+.cart-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 220px;
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
+    border-radius: 1rem; /* Hinzugefügt */
+    padding: 1.5rem; /* Hinzugefügt */
+    
+}
+
+.cart-container.minimized {
+    height: 50px;
+}
+
+.cart-container.minimized h2,
+.cart-container.minimized div {
+    display: none;
 }
