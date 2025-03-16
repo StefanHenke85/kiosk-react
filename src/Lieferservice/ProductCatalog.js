@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import products from './products';
-import ShoppingCart from './ShoppingCart';
 import './Lieferservice.css';
 
-function ProductCatalog({ searchTerm, categoryFilter }) {
-    const shoppingCart = ShoppingCart();
+function ProductCatalog({ searchTerm, categoryFilter, addToCart }) {
     const [selectedVariations, setSelectedVariations] = useState({});
     const [quantities, setQuantities] = useState({});
 
@@ -29,7 +27,7 @@ function ProductCatalog({ searchTerm, categoryFilter }) {
     const handleAddToCart = (product) => {
         const variation = selectedVariations[product.id] || product.variations?.[0];
         const quantity = quantities[product.id] || 1;
-        shoppingCart.addToCart({ ...product, variation, quantity });
+        addToCart({ ...product, variation, quantity });
     };
 
     return (
@@ -58,8 +56,8 @@ function ProductCatalog({ searchTerm, categoryFilter }) {
                                 )}
                                 <input
                                     type="number"
-                                    value={quantities[product.id] !== undefined ? quantities[product.id] : ''} // Dynamischer Wert
-                                    placeholder="Stückzahl " // Platzhaltertext
+                                    value={quantities[product.id] !== undefined ? quantities[product.id] : ''}
+                                    placeholder="Stückzahl"
                                     onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
                                     min="1"
                                 />

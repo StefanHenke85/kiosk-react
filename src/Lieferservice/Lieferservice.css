@@ -125,3 +125,27 @@ div.product-box { /* Spezifität erhöht */
         width: 150px;
     }
 }
+.category-navbar {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.category-navbar button {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #4ec2f8, #ff69b4);
+    color: white;
+    transition: all 0.3s ease;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    border-radius: 20px;
+}
+ 
+
+.category-navbar button:hover {
+    background: linear-gradient(to left, #007bff, #ff69b4);
+}
