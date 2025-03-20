@@ -10,8 +10,13 @@
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
     border: 1px solid black;
+    transition: top 0.3s ease;
     
 }
+.header-hidden {
+    top: -250px; /* Oder die Höhe deines Headers */
+}
+
 
 .header-image {
     width: 100%;

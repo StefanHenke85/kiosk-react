@@ -1,11 +1,27 @@
-// src/components/Header.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
+    const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+
+            setPrevScrollPos(currentScrollPos);
+            setVisible(isVisible);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
+
     return (
-        <header className="header">
+        <header className={`header ${visible ? '' : 'header-hidden'}`}>
             <img src="/img/banner2.jpeg" alt="Kiosk am Niederrhein" className="header-image" />
             <nav className="header-nav">
                 <ul className="header-list">
@@ -17,9 +33,6 @@ function Header() {
                     </li>
                     <li className="header-item">
                         <a href="#oeffnungszeiten" className="header-link">Open</a>
-                    </li>
-                    <li className="header-item">
-                        
                     </li>
                 </ul>
             </nav>
