@@ -1,33 +1,29 @@
 /* src/Lieferservice/Lieferservice.css */
 
 .lieferservice-title {
-    
-        color: rgb(245, 4, 225);
-        background: linear-gradient(to right, #ff69b4, #007bff);
-        -webkit-background-clip: text;
-        background-clip: text;
-        animation: pulse 1s ease-in-out 5; /* 5 Durchläufe */
-        text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.9);
-        text-align: center;
-        padding: 0px;
+    color: rgb(245, 4, 225);
+    background: linear-gradient(to right, #ff69b4, #007bff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: pulse 1s ease-in-out 5; /* 5 Durchläufe */
+    text-shadow: 1px 1px 2px rgba(1, 1, 1, 0.9);
+    text-align: center;
+    padding: 0px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
     }
-    
-    @keyframes pulse {
-        from {
-            transform: scale(1);
-        }
-        to {
-            transform: scale(1.05);
-        }
+    to {
+        transform: scale(1.05);
     }
-    
+}
 
 .lieferservice {
     background: linear-gradient(to right, #4ec2f8, #ff69b4);
     color: rgb(0, 0, 0);
     padding: 2rem 1rem;
-    
-    
 }
 
 .search-container {
@@ -35,15 +31,14 @@
     justify-content: center;
     align-items: center;
     margin: 1rem 0;
-    
 }
 
 div.search-container input[type="text"] {
-    margin: 0 0.5rem;
-    padding: 0.5rem; /* Padding erhöhen */
+    margin: 0 0.8rem;
+    padding: 0.5rem;
     border-radius: 20px;
     background: linear-gradient(to right, #ff69b4, #007bff);
-    color: white;
+    color: white; /* Schriftfarbe auf Weiß setzen */
     font-family: inherit;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
     border-color: black;
@@ -51,7 +46,7 @@ div.search-container input[type="text"] {
 }
 
 div.search-container select {
-    margin: 0 0.5rem;
+    margin: 0 0.8rem;
     padding: 0.5rem;
     border-radius: 20px;
     background: linear-gradient(to right, #ff69b4, #007bff);
@@ -111,9 +106,8 @@ div.product-box { /* Spezifität erhöht */
     padding: 6px;
     border-radius: 20px;
     border: 1px solid black;
-    width: 100%; /* Breite an die Auswahlbox anpassen */
-    box-sizing: border-box; /* Padding und Border in die Breite einbeziehen */
-    
+    width: 100%;
+    box-sizing: border-box;
 }
 
 @media (max-width: 1200px) {
@@ -133,6 +127,7 @@ div.product-box { /* Spezifität erhöht */
         width: 150px;
     }
 }
+
 .category-navbar {
     display: flex;
     justify-content: center;
@@ -151,8 +146,8 @@ div.product-box { /* Spezifität erhöht */
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
     text-decoration: none;
     border-radius: 20px;
+    margin: 0 0.8rem; /* Füge den gleichen Abstand hinzu */
 }
- 
 
 .category-navbar button:hover {
     background: linear-gradient(to left, #007bff, #ff69b4);
@@ -172,9 +167,8 @@ div.product-box { /* Spezifität erhöht */
     width: 220px;
     background: linear-gradient(to right, #ff69b4, #007bff);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.9);
-    border-radius: 1rem; /* Hinzugefügt */
-    padding: 1.5rem; /* Hinzugefügt */
-    
+    border-radius: 1rem;
+    padding: 1.5rem;
 }
 
 .cart-container.minimized {

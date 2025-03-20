@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ProductCatalog from './ProductCatalog';
 import ShoppingCart from './ShoppingCart';
 import PaymentSelection from './PaymentSelection';
 import AddressInput from './AddressInput';
 import Notification from './Notification';
 import products from './products';
+import './Lieferservice.css';
+import { FaListUl, FaBoxes } from 'react-icons/fa';
+import { GiFrenchFries, GiSodaCan, GiCigarette } from 'react-icons/gi';
 
 function LieferservicePage() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,6 +17,18 @@ function LieferservicePage() {
     const [showPaymentSelection, setShowPaymentSelection] = useState(false);
     const [showAddressInput, setShowAddressInput] = useState(false);
     const [notification, setNotification] = useState(null);
+    const h2Ref = useRef(null);
+
+    useEffect(() => {
+        const h2 = h2Ref.current;
+        if (h2) {
+            h2.addEventListener('animationiteration', (event) => {
+                if (event.animationName === 'pulse' && event.target.style.animationIterationCount === '5') {
+                    h2.style.animation = 'none';
+                }
+            });
+        }
+    }, []);
 
     const addToCart = (productId, category, quantity) => {
         if (products[category]) {
@@ -86,20 +101,32 @@ function LieferservicePage() {
                 />
             )}
             <div className="lieferservice">
-                <h2 className="lieferservice-title">Lieferservice bitte beachte die Lieferzeiten!!!</h2>
+                <h2 className="lieferservice-title" ref={h2Ref}>
+                    Lieferservice bitte beachte die Lieferzeiten!!!
+                </h2>
                 <h2 className="lieferservice-title">Freitag - Samstag 17:00 - 03:00 Sonntags 13:00 - 20:00 </h2>
             </div>
             <div className="search-container">
                 <nav className="category-navbar">
-                    <button onClick={() => setCategoryFilter('alle')}>Alle</button>
-                    <button onClick={() => setCategoryFilter('snacks')}>Snacks</button>
-                    <button onClick={() => setCategoryFilter('getraenke')}>Getränke</button>
-                    <button onClick={() => setCategoryFilter('tabakwaren')}>Tabakwaren</button>
-                    <button onClick={() => setCategoryFilter('sonstiges')}>Sonstiges</button>
+                    <button onClick={() => setCategoryFilter('alle')}>
+                        <FaListUl style={{ marginRight: '8px' }} /> Alle
+                    </button>
+                    <button onClick={() => setCategoryFilter('snacks')}>
+                        <GiFrenchFries style={{ marginRight: '8px' }} /> Snacks
+                    </button>
+                    <button onClick={() => setCategoryFilter('getraenke')}>
+                        <GiSodaCan style={{ marginRight: '8px' }} /> Getränke
+                    </button>
+                    <button onClick={() => setCategoryFilter('tabakwaren')}>
+                        <GiCigarette style={{ marginRight: '8px' }} /> Tabakwaren
+                    </button>
+                    <button onClick={() => setCategoryFilter('sonstiges')}>
+                        <FaBoxes style={{ marginRight: '8px' }} /> Sonstiges
+                    </button>
                 </nav>
                 <input
                     type="text"
-                    placeholder="Suche nach Produktnamen"
+                    placeholder="Suche "
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />
